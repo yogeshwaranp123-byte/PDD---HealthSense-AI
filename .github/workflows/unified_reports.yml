@@ -1,0 +1,49 @@
+name: HealthSense Unified E2E & Security Test Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Verify Test Reports
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl
+
+      - name: Simulate Test Executions & Publish Unified Job Summary
+        run: |
+          python tests/publish_combined_results.py
+
+      - name: Upload Website E2E Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Website-E2E-Report
+          path: website/E2E_Test_Report_Healthsense AI_2026-06-11T11-32-38.xlsx
+
+      - name: Upload Mobile E2E Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mobile-E2E-Report
+          path: mobile/report/E2E_Appium_Report_HealthSense_2026-06-11T20-15-33.xlsx
+
+      - name: Upload Backend Security Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Backend-Security-Report
+          path: backend/Security_Vulnerability_Report_2026-06-11T07-29-57.xlsx
