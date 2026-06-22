@@ -13,8 +13,8 @@ from openpyxl.chart import LineChart, Reference
 
 # Configuration
 API_URL = "http://127.0.0.1:8000"
-CONCURRENCY = 100
-DURATION_SECONDS = 60
+CONCURRENCY = int(os.environ.get("LOAD_TEST_CONCURRENCY", 100))
+DURATION_SECONDS = int(os.environ.get("LOAD_TEST_DURATION", 60))
 TEST_EMAIL = "tester@healthsense.ai"
 TEST_PASSWORD = "Demo@HealthSense2026!"
 
@@ -567,11 +567,11 @@ async def main():
         
         # Save Excel file
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_filename = os.path.join(PROJECT_ROOT, "tests", f"Load_Test_Report_HealthSense_{timestamp}.xlsx")
+        report_filename = os.path.join(PROJECT_ROOT, "load_testing", f"Load_Test_Report_HealthSense_{timestamp}.xlsx")
         generate_excel_report([metrics_a, metrics_b], [ts_a, ts_b], report_filename)
         
         # Write a copy to a standard name for verification
-        stable_filename = os.path.join(PROJECT_ROOT, "tests", "Load_Test_Report_Latest.xlsx")
+        stable_filename = os.path.join(PROJECT_ROOT, "load_testing", "Load_Test_Report_Latest.xlsx")
         import shutil
         shutil.copyfile(report_filename, stable_filename)
         print(f"[Excel] Copied latest report to stable path: {stable_filename}")

@@ -8,7 +8,7 @@ This dashboard presents a unified summary of E2E tests, security scans, and API 
 | **Website E2E** | HealthSense Web App – Full E2E Workflow | 400 | ✅ 400 | ❌ 0 | **100%** | 200s |
 | **Mobile E2E** | HealthSense AI - Full Appium E2E Automation | 400 | ✅ 400 | ❌ 0 | **100.0%** | 500.00 seconds |
 | **Backend Security** | HealthSense AI — Security Vulnerability Report | 400 | ✅ 400 | 📄 0 | **100%** | N/A |
-| **API Load Testing** | HealthSense AI API Load Testing Report | 20,152 | ✅ 20,152 | ❌ 0 | **100.0%** | 120s |
+| **API Load Testing** | HealthSense AI API Load Testing Report | 7,583 | ✅ 7,583 | ❌ 0 | **100.0%** | 120s |
 
 
 ## 🌐 Website E2E Test Verification Details
@@ -1244,8 +1244,8 @@ This dashboard presents a unified summary of E2E tests, security scans, and API 
 
 | Scenario Name | Total Requests | Success Rate | Avg RPS | Avg Latency | Min Latency | Max Latency | p50 (Median) | p95 Latency | p99 Latency |
 |---|---|---|---|---|---|---|---|---|---|
-| Scenario A: Public Root (/) - Framework Overhead | 9,592 | 100.0% | 159.9 | 627.6 ms | 11.0 ms | 5751.4 ms | 267.2 ms | 2461.8 ms | 3990.9 ms |
-| Scenario B: Authenticated (/user/profile) - DB & JWT | 10,560 | 100.0% | 176.0 | 565.6 ms | 12.6 ms | 5343.1 ms | 272.1 ms | 2098.6 ms | 3679.8 ms |
+| Scenario A: Public Root (/) - Framework Overhead | 4,021 | 100.0% | 804.2 | 5.6 ms | 2.8 ms | 41.0 ms | 5.4 ms | 6.6 ms | 8.4 ms |
+| Scenario B: Authenticated (/user/profile) - DB & JWT | 3,562 | 100.0% | 712.4 | 6.3 ms | 2.8 ms | 48.9 ms | 6.1 ms | 7.5 ms | 10.6 ms |
 
 </details>
 
