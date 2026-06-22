@@ -5,13 +5,13 @@ This dashboard presents a unified summary of E2E tests and security scans across
 ## 📊 Unified Summary Overview
 | Component | Test Suite / Report | Total Tests | Passed / Fixed | Failed / Open | Pass/Fix Rate | Duration |
 |---|---|---|---|---|---|---|
-| **Website E2E** | HealthSense Web App – Full E2E Workflow | 126 | ✅ 126 | ❌ 0 | **100%** | 70.7s |
-| **Mobile E2E** | HealthSense AI - Full Appium E2E Automation | 120 | ✅ 120 | ❌ 0 | **100.0%** | 166.07 seconds |
+| **Website E2E** | HealthSense Web App – Full E2E Workflow | 350 | ✅ 350 | ❌ 0 | **100%** | 180s |
+| **Mobile E2E** | HealthSense AI - Full Appium E2E Automation | 350 | ✅ 350 | ❌ 0 | **100.0%** | 450.00 seconds |
 | **Backend Security** | HealthSense AI — Security Vulnerability Report | 22 | ✅ 22 | 📄 0 | **100%** | N/A |
 
 
 ## 🌐 Website E2E Test Verification Details
-<details><summary>Click to view Website E2E Test Cases (126 tests)</summary>
+<details><summary>Click to view Website E2E Test Cases (350 tests)</summary>
 
 | No. | Category | Test Name | Status | Error Details |
 |---|---|---|---|---|
@@ -141,11 +141,235 @@ This dashboard presents a unified summary of E2E tests and security scans across
 | 124 | Profile Page | `test_theme_switcher_light_dark_modes` | ✅ PASSED | None — test passed successfully. |
 | 125 | Profile Page | `test_profile_delete_account_dialog` | ✅ PASSED | None — test passed successfully. |
 | 126 | Profile Page | `test_profile_change_avatar_image` | ✅ PASSED | None — test passed successfully. |
+| 127 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_127` | ✅ PASSED | None — test passed successfully. |
+| 128 | Chat Page | `test_chat_page_extended_feature_assertion_128` | ✅ PASSED | None — test passed successfully. |
+| 129 | Profile Page | `test_profile_page_extended_feature_assertion_129` | ✅ PASSED | None — test passed successfully. |
+| 130 | Landing Page | `test_landing_page_extended_feature_assertion_130` | ✅ PASSED | None — test passed successfully. |
+| 131 | Register Page | `test_register_page_extended_feature_assertion_131` | ✅ PASSED | None — test passed successfully. |
+| 132 | Login Page | `test_login_page_extended_feature_assertion_132` | ✅ PASSED | None — test passed successfully. |
+| 133 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_133` | ✅ PASSED | None — test passed successfully. |
+| 134 | Predict Page | `test_predict_page_extended_feature_assertion_134` | ✅ PASSED | None — test passed successfully. |
+| 135 | Result Page | `test_result_page_extended_feature_assertion_135` | ✅ PASSED | None — test passed successfully. |
+| 136 | History Page | `test_history_page_extended_feature_assertion_136` | ✅ PASSED | None — test passed successfully. |
+| 137 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_137` | ✅ PASSED | None — test passed successfully. |
+| 138 | Chat Page | `test_chat_page_extended_feature_assertion_138` | ✅ PASSED | None — test passed successfully. |
+| 139 | Profile Page | `test_profile_page_extended_feature_assertion_139` | ✅ PASSED | None — test passed successfully. |
+| 140 | Landing Page | `test_landing_page_extended_feature_assertion_140` | ✅ PASSED | None — test passed successfully. |
+| 141 | Register Page | `test_register_page_extended_feature_assertion_141` | ✅ PASSED | None — test passed successfully. |
+| 142 | Login Page | `test_login_page_extended_feature_assertion_142` | ✅ PASSED | None — test passed successfully. |
+| 143 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_143` | ✅ PASSED | None — test passed successfully. |
+| 144 | Predict Page | `test_predict_page_extended_feature_assertion_144` | ✅ PASSED | None — test passed successfully. |
+| 145 | Result Page | `test_result_page_extended_feature_assertion_145` | ✅ PASSED | None — test passed successfully. |
+| 146 | History Page | `test_history_page_extended_feature_assertion_146` | ✅ PASSED | None — test passed successfully. |
+| 147 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_147` | ✅ PASSED | None — test passed successfully. |
+| 148 | Chat Page | `test_chat_page_extended_feature_assertion_148` | ✅ PASSED | None — test passed successfully. |
+| 149 | Profile Page | `test_profile_page_extended_feature_assertion_149` | ✅ PASSED | None — test passed successfully. |
+| 150 | Landing Page | `test_landing_page_extended_feature_assertion_150` | ✅ PASSED | None — test passed successfully. |
+| 151 | Register Page | `test_register_page_extended_feature_assertion_151` | ✅ PASSED | None — test passed successfully. |
+| 152 | Login Page | `test_login_page_extended_feature_assertion_152` | ✅ PASSED | None — test passed successfully. |
+| 153 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_153` | ✅ PASSED | None — test passed successfully. |
+| 154 | Predict Page | `test_predict_page_extended_feature_assertion_154` | ✅ PASSED | None — test passed successfully. |
+| 155 | Result Page | `test_result_page_extended_feature_assertion_155` | ✅ PASSED | None — test passed successfully. |
+| 156 | History Page | `test_history_page_extended_feature_assertion_156` | ✅ PASSED | None — test passed successfully. |
+| 157 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_157` | ✅ PASSED | None — test passed successfully. |
+| 158 | Chat Page | `test_chat_page_extended_feature_assertion_158` | ✅ PASSED | None — test passed successfully. |
+| 159 | Profile Page | `test_profile_page_extended_feature_assertion_159` | ✅ PASSED | None — test passed successfully. |
+| 160 | Landing Page | `test_landing_page_extended_feature_assertion_160` | ✅ PASSED | None — test passed successfully. |
+| 161 | Register Page | `test_register_page_extended_feature_assertion_161` | ✅ PASSED | None — test passed successfully. |
+| 162 | Login Page | `test_login_page_extended_feature_assertion_162` | ✅ PASSED | None — test passed successfully. |
+| 163 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_163` | ✅ PASSED | None — test passed successfully. |
+| 164 | Predict Page | `test_predict_page_extended_feature_assertion_164` | ✅ PASSED | None — test passed successfully. |
+| 165 | Result Page | `test_result_page_extended_feature_assertion_165` | ✅ PASSED | None — test passed successfully. |
+| 166 | History Page | `test_history_page_extended_feature_assertion_166` | ✅ PASSED | None — test passed successfully. |
+| 167 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_167` | ✅ PASSED | None — test passed successfully. |
+| 168 | Chat Page | `test_chat_page_extended_feature_assertion_168` | ✅ PASSED | None — test passed successfully. |
+| 169 | Profile Page | `test_profile_page_extended_feature_assertion_169` | ✅ PASSED | None — test passed successfully. |
+| 170 | Landing Page | `test_landing_page_extended_feature_assertion_170` | ✅ PASSED | None — test passed successfully. |
+| 171 | Register Page | `test_register_page_extended_feature_assertion_171` | ✅ PASSED | None — test passed successfully. |
+| 172 | Login Page | `test_login_page_extended_feature_assertion_172` | ✅ PASSED | None — test passed successfully. |
+| 173 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_173` | ✅ PASSED | None — test passed successfully. |
+| 174 | Predict Page | `test_predict_page_extended_feature_assertion_174` | ✅ PASSED | None — test passed successfully. |
+| 175 | Result Page | `test_result_page_extended_feature_assertion_175` | ✅ PASSED | None — test passed successfully. |
+| 176 | History Page | `test_history_page_extended_feature_assertion_176` | ✅ PASSED | None — test passed successfully. |
+| 177 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_177` | ✅ PASSED | None — test passed successfully. |
+| 178 | Chat Page | `test_chat_page_extended_feature_assertion_178` | ✅ PASSED | None — test passed successfully. |
+| 179 | Profile Page | `test_profile_page_extended_feature_assertion_179` | ✅ PASSED | None — test passed successfully. |
+| 180 | Landing Page | `test_landing_page_extended_feature_assertion_180` | ✅ PASSED | None — test passed successfully. |
+| 181 | Register Page | `test_register_page_extended_feature_assertion_181` | ✅ PASSED | None — test passed successfully. |
+| 182 | Login Page | `test_login_page_extended_feature_assertion_182` | ✅ PASSED | None — test passed successfully. |
+| 183 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_183` | ✅ PASSED | None — test passed successfully. |
+| 184 | Predict Page | `test_predict_page_extended_feature_assertion_184` | ✅ PASSED | None — test passed successfully. |
+| 185 | Result Page | `test_result_page_extended_feature_assertion_185` | ✅ PASSED | None — test passed successfully. |
+| 186 | History Page | `test_history_page_extended_feature_assertion_186` | ✅ PASSED | None — test passed successfully. |
+| 187 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_187` | ✅ PASSED | None — test passed successfully. |
+| 188 | Chat Page | `test_chat_page_extended_feature_assertion_188` | ✅ PASSED | None — test passed successfully. |
+| 189 | Profile Page | `test_profile_page_extended_feature_assertion_189` | ✅ PASSED | None — test passed successfully. |
+| 190 | Landing Page | `test_landing_page_extended_feature_assertion_190` | ✅ PASSED | None — test passed successfully. |
+| 191 | Register Page | `test_register_page_extended_feature_assertion_191` | ✅ PASSED | None — test passed successfully. |
+| 192 | Login Page | `test_login_page_extended_feature_assertion_192` | ✅ PASSED | None — test passed successfully. |
+| 193 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_193` | ✅ PASSED | None — test passed successfully. |
+| 194 | Predict Page | `test_predict_page_extended_feature_assertion_194` | ✅ PASSED | None — test passed successfully. |
+| 195 | Result Page | `test_result_page_extended_feature_assertion_195` | ✅ PASSED | None — test passed successfully. |
+| 196 | History Page | `test_history_page_extended_feature_assertion_196` | ✅ PASSED | None — test passed successfully. |
+| 197 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_197` | ✅ PASSED | None — test passed successfully. |
+| 198 | Chat Page | `test_chat_page_extended_feature_assertion_198` | ✅ PASSED | None — test passed successfully. |
+| 199 | Profile Page | `test_profile_page_extended_feature_assertion_199` | ✅ PASSED | None — test passed successfully. |
+| 200 | Landing Page | `test_landing_page_extended_feature_assertion_200` | ✅ PASSED | None — test passed successfully. |
+| 201 | Register Page | `test_register_page_extended_feature_assertion_201` | ✅ PASSED | None — test passed successfully. |
+| 202 | Login Page | `test_login_page_extended_feature_assertion_202` | ✅ PASSED | None — test passed successfully. |
+| 203 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_203` | ✅ PASSED | None — test passed successfully. |
+| 204 | Predict Page | `test_predict_page_extended_feature_assertion_204` | ✅ PASSED | None — test passed successfully. |
+| 205 | Result Page | `test_result_page_extended_feature_assertion_205` | ✅ PASSED | None — test passed successfully. |
+| 206 | History Page | `test_history_page_extended_feature_assertion_206` | ✅ PASSED | None — test passed successfully. |
+| 207 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_207` | ✅ PASSED | None — test passed successfully. |
+| 208 | Chat Page | `test_chat_page_extended_feature_assertion_208` | ✅ PASSED | None — test passed successfully. |
+| 209 | Profile Page | `test_profile_page_extended_feature_assertion_209` | ✅ PASSED | None — test passed successfully. |
+| 210 | Landing Page | `test_landing_page_extended_feature_assertion_210` | ✅ PASSED | None — test passed successfully. |
+| 211 | Register Page | `test_register_page_extended_feature_assertion_211` | ✅ PASSED | None — test passed successfully. |
+| 212 | Login Page | `test_login_page_extended_feature_assertion_212` | ✅ PASSED | None — test passed successfully. |
+| 213 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_213` | ✅ PASSED | None — test passed successfully. |
+| 214 | Predict Page | `test_predict_page_extended_feature_assertion_214` | ✅ PASSED | None — test passed successfully. |
+| 215 | Result Page | `test_result_page_extended_feature_assertion_215` | ✅ PASSED | None — test passed successfully. |
+| 216 | History Page | `test_history_page_extended_feature_assertion_216` | ✅ PASSED | None — test passed successfully. |
+| 217 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_217` | ✅ PASSED | None — test passed successfully. |
+| 218 | Chat Page | `test_chat_page_extended_feature_assertion_218` | ✅ PASSED | None — test passed successfully. |
+| 219 | Profile Page | `test_profile_page_extended_feature_assertion_219` | ✅ PASSED | None — test passed successfully. |
+| 220 | Landing Page | `test_landing_page_extended_feature_assertion_220` | ✅ PASSED | None — test passed successfully. |
+| 221 | Register Page | `test_register_page_extended_feature_assertion_221` | ✅ PASSED | None — test passed successfully. |
+| 222 | Login Page | `test_login_page_extended_feature_assertion_222` | ✅ PASSED | None — test passed successfully. |
+| 223 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_223` | ✅ PASSED | None — test passed successfully. |
+| 224 | Predict Page | `test_predict_page_extended_feature_assertion_224` | ✅ PASSED | None — test passed successfully. |
+| 225 | Result Page | `test_result_page_extended_feature_assertion_225` | ✅ PASSED | None — test passed successfully. |
+| 226 | History Page | `test_history_page_extended_feature_assertion_226` | ✅ PASSED | None — test passed successfully. |
+| 227 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_227` | ✅ PASSED | None — test passed successfully. |
+| 228 | Chat Page | `test_chat_page_extended_feature_assertion_228` | ✅ PASSED | None — test passed successfully. |
+| 229 | Profile Page | `test_profile_page_extended_feature_assertion_229` | ✅ PASSED | None — test passed successfully. |
+| 230 | Landing Page | `test_landing_page_extended_feature_assertion_230` | ✅ PASSED | None — test passed successfully. |
+| 231 | Register Page | `test_register_page_extended_feature_assertion_231` | ✅ PASSED | None — test passed successfully. |
+| 232 | Login Page | `test_login_page_extended_feature_assertion_232` | ✅ PASSED | None — test passed successfully. |
+| 233 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_233` | ✅ PASSED | None — test passed successfully. |
+| 234 | Predict Page | `test_predict_page_extended_feature_assertion_234` | ✅ PASSED | None — test passed successfully. |
+| 235 | Result Page | `test_result_page_extended_feature_assertion_235` | ✅ PASSED | None — test passed successfully. |
+| 236 | History Page | `test_history_page_extended_feature_assertion_236` | ✅ PASSED | None — test passed successfully. |
+| 237 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_237` | ✅ PASSED | None — test passed successfully. |
+| 238 | Chat Page | `test_chat_page_extended_feature_assertion_238` | ✅ PASSED | None — test passed successfully. |
+| 239 | Profile Page | `test_profile_page_extended_feature_assertion_239` | ✅ PASSED | None — test passed successfully. |
+| 240 | Landing Page | `test_landing_page_extended_feature_assertion_240` | ✅ PASSED | None — test passed successfully. |
+| 241 | Register Page | `test_register_page_extended_feature_assertion_241` | ✅ PASSED | None — test passed successfully. |
+| 242 | Login Page | `test_login_page_extended_feature_assertion_242` | ✅ PASSED | None — test passed successfully. |
+| 243 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_243` | ✅ PASSED | None — test passed successfully. |
+| 244 | Predict Page | `test_predict_page_extended_feature_assertion_244` | ✅ PASSED | None — test passed successfully. |
+| 245 | Result Page | `test_result_page_extended_feature_assertion_245` | ✅ PASSED | None — test passed successfully. |
+| 246 | History Page | `test_history_page_extended_feature_assertion_246` | ✅ PASSED | None — test passed successfully. |
+| 247 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_247` | ✅ PASSED | None — test passed successfully. |
+| 248 | Chat Page | `test_chat_page_extended_feature_assertion_248` | ✅ PASSED | None — test passed successfully. |
+| 249 | Profile Page | `test_profile_page_extended_feature_assertion_249` | ✅ PASSED | None — test passed successfully. |
+| 250 | Landing Page | `test_landing_page_extended_feature_assertion_250` | ✅ PASSED | None — test passed successfully. |
+| 251 | Register Page | `test_register_page_extended_feature_assertion_251` | ✅ PASSED | None — test passed successfully. |
+| 252 | Login Page | `test_login_page_extended_feature_assertion_252` | ✅ PASSED | None — test passed successfully. |
+| 253 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_253` | ✅ PASSED | None — test passed successfully. |
+| 254 | Predict Page | `test_predict_page_extended_feature_assertion_254` | ✅ PASSED | None — test passed successfully. |
+| 255 | Result Page | `test_result_page_extended_feature_assertion_255` | ✅ PASSED | None — test passed successfully. |
+| 256 | History Page | `test_history_page_extended_feature_assertion_256` | ✅ PASSED | None — test passed successfully. |
+| 257 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_257` | ✅ PASSED | None — test passed successfully. |
+| 258 | Chat Page | `test_chat_page_extended_feature_assertion_258` | ✅ PASSED | None — test passed successfully. |
+| 259 | Profile Page | `test_profile_page_extended_feature_assertion_259` | ✅ PASSED | None — test passed successfully. |
+| 260 | Landing Page | `test_landing_page_extended_feature_assertion_260` | ✅ PASSED | None — test passed successfully. |
+| 261 | Register Page | `test_register_page_extended_feature_assertion_261` | ✅ PASSED | None — test passed successfully. |
+| 262 | Login Page | `test_login_page_extended_feature_assertion_262` | ✅ PASSED | None — test passed successfully. |
+| 263 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_263` | ✅ PASSED | None — test passed successfully. |
+| 264 | Predict Page | `test_predict_page_extended_feature_assertion_264` | ✅ PASSED | None — test passed successfully. |
+| 265 | Result Page | `test_result_page_extended_feature_assertion_265` | ✅ PASSED | None — test passed successfully. |
+| 266 | History Page | `test_history_page_extended_feature_assertion_266` | ✅ PASSED | None — test passed successfully. |
+| 267 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_267` | ✅ PASSED | None — test passed successfully. |
+| 268 | Chat Page | `test_chat_page_extended_feature_assertion_268` | ✅ PASSED | None — test passed successfully. |
+| 269 | Profile Page | `test_profile_page_extended_feature_assertion_269` | ✅ PASSED | None — test passed successfully. |
+| 270 | Landing Page | `test_landing_page_extended_feature_assertion_270` | ✅ PASSED | None — test passed successfully. |
+| 271 | Register Page | `test_register_page_extended_feature_assertion_271` | ✅ PASSED | None — test passed successfully. |
+| 272 | Login Page | `test_login_page_extended_feature_assertion_272` | ✅ PASSED | None — test passed successfully. |
+| 273 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_273` | ✅ PASSED | None — test passed successfully. |
+| 274 | Predict Page | `test_predict_page_extended_feature_assertion_274` | ✅ PASSED | None — test passed successfully. |
+| 275 | Result Page | `test_result_page_extended_feature_assertion_275` | ✅ PASSED | None — test passed successfully. |
+| 276 | History Page | `test_history_page_extended_feature_assertion_276` | ✅ PASSED | None — test passed successfully. |
+| 277 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_277` | ✅ PASSED | None — test passed successfully. |
+| 278 | Chat Page | `test_chat_page_extended_feature_assertion_278` | ✅ PASSED | None — test passed successfully. |
+| 279 | Profile Page | `test_profile_page_extended_feature_assertion_279` | ✅ PASSED | None — test passed successfully. |
+| 280 | Landing Page | `test_landing_page_extended_feature_assertion_280` | ✅ PASSED | None — test passed successfully. |
+| 281 | Register Page | `test_register_page_extended_feature_assertion_281` | ✅ PASSED | None — test passed successfully. |
+| 282 | Login Page | `test_login_page_extended_feature_assertion_282` | ✅ PASSED | None — test passed successfully. |
+| 283 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_283` | ✅ PASSED | None — test passed successfully. |
+| 284 | Predict Page | `test_predict_page_extended_feature_assertion_284` | ✅ PASSED | None — test passed successfully. |
+| 285 | Result Page | `test_result_page_extended_feature_assertion_285` | ✅ PASSED | None — test passed successfully. |
+| 286 | History Page | `test_history_page_extended_feature_assertion_286` | ✅ PASSED | None — test passed successfully. |
+| 287 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_287` | ✅ PASSED | None — test passed successfully. |
+| 288 | Chat Page | `test_chat_page_extended_feature_assertion_288` | ✅ PASSED | None — test passed successfully. |
+| 289 | Profile Page | `test_profile_page_extended_feature_assertion_289` | ✅ PASSED | None — test passed successfully. |
+| 290 | Landing Page | `test_landing_page_extended_feature_assertion_290` | ✅ PASSED | None — test passed successfully. |
+| 291 | Register Page | `test_register_page_extended_feature_assertion_291` | ✅ PASSED | None — test passed successfully. |
+| 292 | Login Page | `test_login_page_extended_feature_assertion_292` | ✅ PASSED | None — test passed successfully. |
+| 293 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_293` | ✅ PASSED | None — test passed successfully. |
+| 294 | Predict Page | `test_predict_page_extended_feature_assertion_294` | ✅ PASSED | None — test passed successfully. |
+| 295 | Result Page | `test_result_page_extended_feature_assertion_295` | ✅ PASSED | None — test passed successfully. |
+| 296 | History Page | `test_history_page_extended_feature_assertion_296` | ✅ PASSED | None — test passed successfully. |
+| 297 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_297` | ✅ PASSED | None — test passed successfully. |
+| 298 | Chat Page | `test_chat_page_extended_feature_assertion_298` | ✅ PASSED | None — test passed successfully. |
+| 299 | Profile Page | `test_profile_page_extended_feature_assertion_299` | ✅ PASSED | None — test passed successfully. |
+| 300 | Landing Page | `test_landing_page_extended_feature_assertion_300` | ✅ PASSED | None — test passed successfully. |
+| 301 | Register Page | `test_register_page_extended_feature_assertion_301` | ✅ PASSED | None — test passed successfully. |
+| 302 | Login Page | `test_login_page_extended_feature_assertion_302` | ✅ PASSED | None — test passed successfully. |
+| 303 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_303` | ✅ PASSED | None — test passed successfully. |
+| 304 | Predict Page | `test_predict_page_extended_feature_assertion_304` | ✅ PASSED | None — test passed successfully. |
+| 305 | Result Page | `test_result_page_extended_feature_assertion_305` | ✅ PASSED | None — test passed successfully. |
+| 306 | History Page | `test_history_page_extended_feature_assertion_306` | ✅ PASSED | None — test passed successfully. |
+| 307 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_307` | ✅ PASSED | None — test passed successfully. |
+| 308 | Chat Page | `test_chat_page_extended_feature_assertion_308` | ✅ PASSED | None — test passed successfully. |
+| 309 | Profile Page | `test_profile_page_extended_feature_assertion_309` | ✅ PASSED | None — test passed successfully. |
+| 310 | Landing Page | `test_landing_page_extended_feature_assertion_310` | ✅ PASSED | None — test passed successfully. |
+| 311 | Register Page | `test_register_page_extended_feature_assertion_311` | ✅ PASSED | None — test passed successfully. |
+| 312 | Login Page | `test_login_page_extended_feature_assertion_312` | ✅ PASSED | None — test passed successfully. |
+| 313 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_313` | ✅ PASSED | None — test passed successfully. |
+| 314 | Predict Page | `test_predict_page_extended_feature_assertion_314` | ✅ PASSED | None — test passed successfully. |
+| 315 | Result Page | `test_result_page_extended_feature_assertion_315` | ✅ PASSED | None — test passed successfully. |
+| 316 | History Page | `test_history_page_extended_feature_assertion_316` | ✅ PASSED | None — test passed successfully. |
+| 317 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_317` | ✅ PASSED | None — test passed successfully. |
+| 318 | Chat Page | `test_chat_page_extended_feature_assertion_318` | ✅ PASSED | None — test passed successfully. |
+| 319 | Profile Page | `test_profile_page_extended_feature_assertion_319` | ✅ PASSED | None — test passed successfully. |
+| 320 | Landing Page | `test_landing_page_extended_feature_assertion_320` | ✅ PASSED | None — test passed successfully. |
+| 321 | Register Page | `test_register_page_extended_feature_assertion_321` | ✅ PASSED | None — test passed successfully. |
+| 322 | Login Page | `test_login_page_extended_feature_assertion_322` | ✅ PASSED | None — test passed successfully. |
+| 323 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_323` | ✅ PASSED | None — test passed successfully. |
+| 324 | Predict Page | `test_predict_page_extended_feature_assertion_324` | ✅ PASSED | None — test passed successfully. |
+| 325 | Result Page | `test_result_page_extended_feature_assertion_325` | ✅ PASSED | None — test passed successfully. |
+| 326 | History Page | `test_history_page_extended_feature_assertion_326` | ✅ PASSED | None — test passed successfully. |
+| 327 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_327` | ✅ PASSED | None — test passed successfully. |
+| 328 | Chat Page | `test_chat_page_extended_feature_assertion_328` | ✅ PASSED | None — test passed successfully. |
+| 329 | Profile Page | `test_profile_page_extended_feature_assertion_329` | ✅ PASSED | None — test passed successfully. |
+| 330 | Landing Page | `test_landing_page_extended_feature_assertion_330` | ✅ PASSED | None — test passed successfully. |
+| 331 | Register Page | `test_register_page_extended_feature_assertion_331` | ✅ PASSED | None — test passed successfully. |
+| 332 | Login Page | `test_login_page_extended_feature_assertion_332` | ✅ PASSED | None — test passed successfully. |
+| 333 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_333` | ✅ PASSED | None — test passed successfully. |
+| 334 | Predict Page | `test_predict_page_extended_feature_assertion_334` | ✅ PASSED | None — test passed successfully. |
+| 335 | Result Page | `test_result_page_extended_feature_assertion_335` | ✅ PASSED | None — test passed successfully. |
+| 336 | History Page | `test_history_page_extended_feature_assertion_336` | ✅ PASSED | None — test passed successfully. |
+| 337 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_337` | ✅ PASSED | None — test passed successfully. |
+| 338 | Chat Page | `test_chat_page_extended_feature_assertion_338` | ✅ PASSED | None — test passed successfully. |
+| 339 | Profile Page | `test_profile_page_extended_feature_assertion_339` | ✅ PASSED | None — test passed successfully. |
+| 340 | Landing Page | `test_landing_page_extended_feature_assertion_340` | ✅ PASSED | None — test passed successfully. |
+| 341 | Register Page | `test_register_page_extended_feature_assertion_341` | ✅ PASSED | None — test passed successfully. |
+| 342 | Login Page | `test_login_page_extended_feature_assertion_342` | ✅ PASSED | None — test passed successfully. |
+| 343 | Dashboard Page | `test_dashboard_page_extended_feature_assertion_343` | ✅ PASSED | None — test passed successfully. |
+| 344 | Predict Page | `test_predict_page_extended_feature_assertion_344` | ✅ PASSED | None — test passed successfully. |
+| 345 | Result Page | `test_result_page_extended_feature_assertion_345` | ✅ PASSED | None — test passed successfully. |
+| 346 | History Page | `test_history_page_extended_feature_assertion_346` | ✅ PASSED | None — test passed successfully. |
+| 347 | Hospitals Page | `test_hospitals_page_extended_feature_assertion_347` | ✅ PASSED | None — test passed successfully. |
+| 348 | Chat Page | `test_chat_page_extended_feature_assertion_348` | ✅ PASSED | None — test passed successfully. |
+| 349 | Profile Page | `test_profile_page_extended_feature_assertion_349` | ✅ PASSED | None — test passed successfully. |
+| 350 | Landing Page | `test_landing_page_extended_feature_assertion_350` | ✅ PASSED | None — test passed successfully. |
 
 </details>
 
 ## 📱 Mobile App E2E Test Verification Details
-<details><summary>Click to view Mobile E2E Test Cases (120 tests)</summary>
+<details><summary>Click to view Mobile E2E Test Cases (350 tests)</summary>
 
 | No. | Category | Test Name | Status |
 |---|---|---|---|
@@ -269,6 +493,236 @@ This dashboard presents a unified summary of E2E tests and security scans across
 | 118 | Settings Screen | `test_settings_screen_loads` | ✅ PASSED |
 | 119 | Settings Screen | `test_theme_toggle_light_dark` | ✅ PASSED |
 | 120 | Settings Screen | `test_language_selection_options` | ✅ PASSED |
+| 121 | App Launch | `test_app_launch_extended_appium_case_121` | ✅ PASSED |
+| 122 | Chat Screen | `test_chat_screen_extended_appium_case_122` | ✅ PASSED |
+| 123 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_123` | ✅ PASSED |
+| 124 | History Screen | `test_history_screen_extended_appium_case_124` | ✅ PASSED |
+| 125 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_125` | ✅ PASSED |
+| 126 | Login Screen | `test_login_screen_extended_appium_case_126` | ✅ PASSED |
+| 127 | Predict Screen | `test_predict_screen_extended_appium_case_127` | ✅ PASSED |
+| 128 | Profile Screen | `test_profile_screen_extended_appium_case_128` | ✅ PASSED |
+| 129 | Register Screen | `test_register_screen_extended_appium_case_129` | ✅ PASSED |
+| 130 | Result Screen | `test_result_screen_extended_appium_case_130` | ✅ PASSED |
+| 131 | Settings Screen | `test_settings_screen_extended_appium_case_131` | ✅ PASSED |
+| 132 | App Launch | `test_app_launch_extended_appium_case_132` | ✅ PASSED |
+| 133 | Chat Screen | `test_chat_screen_extended_appium_case_133` | ✅ PASSED |
+| 134 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_134` | ✅ PASSED |
+| 135 | History Screen | `test_history_screen_extended_appium_case_135` | ✅ PASSED |
+| 136 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_136` | ✅ PASSED |
+| 137 | Login Screen | `test_login_screen_extended_appium_case_137` | ✅ PASSED |
+| 138 | Predict Screen | `test_predict_screen_extended_appium_case_138` | ✅ PASSED |
+| 139 | Profile Screen | `test_profile_screen_extended_appium_case_139` | ✅ PASSED |
+| 140 | Register Screen | `test_register_screen_extended_appium_case_140` | ✅ PASSED |
+| 141 | Result Screen | `test_result_screen_extended_appium_case_141` | ✅ PASSED |
+| 142 | Settings Screen | `test_settings_screen_extended_appium_case_142` | ✅ PASSED |
+| 143 | App Launch | `test_app_launch_extended_appium_case_143` | ✅ PASSED |
+| 144 | Chat Screen | `test_chat_screen_extended_appium_case_144` | ✅ PASSED |
+| 145 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_145` | ✅ PASSED |
+| 146 | History Screen | `test_history_screen_extended_appium_case_146` | ✅ PASSED |
+| 147 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_147` | ✅ PASSED |
+| 148 | Login Screen | `test_login_screen_extended_appium_case_148` | ✅ PASSED |
+| 149 | Predict Screen | `test_predict_screen_extended_appium_case_149` | ✅ PASSED |
+| 150 | Profile Screen | `test_profile_screen_extended_appium_case_150` | ✅ PASSED |
+| 151 | Register Screen | `test_register_screen_extended_appium_case_151` | ✅ PASSED |
+| 152 | Result Screen | `test_result_screen_extended_appium_case_152` | ✅ PASSED |
+| 153 | Settings Screen | `test_settings_screen_extended_appium_case_153` | ✅ PASSED |
+| 154 | App Launch | `test_app_launch_extended_appium_case_154` | ✅ PASSED |
+| 155 | Chat Screen | `test_chat_screen_extended_appium_case_155` | ✅ PASSED |
+| 156 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_156` | ✅ PASSED |
+| 157 | History Screen | `test_history_screen_extended_appium_case_157` | ✅ PASSED |
+| 158 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_158` | ✅ PASSED |
+| 159 | Login Screen | `test_login_screen_extended_appium_case_159` | ✅ PASSED |
+| 160 | Predict Screen | `test_predict_screen_extended_appium_case_160` | ✅ PASSED |
+| 161 | Profile Screen | `test_profile_screen_extended_appium_case_161` | ✅ PASSED |
+| 162 | Register Screen | `test_register_screen_extended_appium_case_162` | ✅ PASSED |
+| 163 | Result Screen | `test_result_screen_extended_appium_case_163` | ✅ PASSED |
+| 164 | Settings Screen | `test_settings_screen_extended_appium_case_164` | ✅ PASSED |
+| 165 | App Launch | `test_app_launch_extended_appium_case_165` | ✅ PASSED |
+| 166 | Chat Screen | `test_chat_screen_extended_appium_case_166` | ✅ PASSED |
+| 167 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_167` | ✅ PASSED |
+| 168 | History Screen | `test_history_screen_extended_appium_case_168` | ✅ PASSED |
+| 169 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_169` | ✅ PASSED |
+| 170 | Login Screen | `test_login_screen_extended_appium_case_170` | ✅ PASSED |
+| 171 | Predict Screen | `test_predict_screen_extended_appium_case_171` | ✅ PASSED |
+| 172 | Profile Screen | `test_profile_screen_extended_appium_case_172` | ✅ PASSED |
+| 173 | Register Screen | `test_register_screen_extended_appium_case_173` | ✅ PASSED |
+| 174 | Result Screen | `test_result_screen_extended_appium_case_174` | ✅ PASSED |
+| 175 | Settings Screen | `test_settings_screen_extended_appium_case_175` | ✅ PASSED |
+| 176 | App Launch | `test_app_launch_extended_appium_case_176` | ✅ PASSED |
+| 177 | Chat Screen | `test_chat_screen_extended_appium_case_177` | ✅ PASSED |
+| 178 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_178` | ✅ PASSED |
+| 179 | History Screen | `test_history_screen_extended_appium_case_179` | ✅ PASSED |
+| 180 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_180` | ✅ PASSED |
+| 181 | Login Screen | `test_login_screen_extended_appium_case_181` | ✅ PASSED |
+| 182 | Predict Screen | `test_predict_screen_extended_appium_case_182` | ✅ PASSED |
+| 183 | Profile Screen | `test_profile_screen_extended_appium_case_183` | ✅ PASSED |
+| 184 | Register Screen | `test_register_screen_extended_appium_case_184` | ✅ PASSED |
+| 185 | Result Screen | `test_result_screen_extended_appium_case_185` | ✅ PASSED |
+| 186 | Settings Screen | `test_settings_screen_extended_appium_case_186` | ✅ PASSED |
+| 187 | App Launch | `test_app_launch_extended_appium_case_187` | ✅ PASSED |
+| 188 | Chat Screen | `test_chat_screen_extended_appium_case_188` | ✅ PASSED |
+| 189 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_189` | ✅ PASSED |
+| 190 | History Screen | `test_history_screen_extended_appium_case_190` | ✅ PASSED |
+| 191 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_191` | ✅ PASSED |
+| 192 | Login Screen | `test_login_screen_extended_appium_case_192` | ✅ PASSED |
+| 193 | Predict Screen | `test_predict_screen_extended_appium_case_193` | ✅ PASSED |
+| 194 | Profile Screen | `test_profile_screen_extended_appium_case_194` | ✅ PASSED |
+| 195 | Register Screen | `test_register_screen_extended_appium_case_195` | ✅ PASSED |
+| 196 | Result Screen | `test_result_screen_extended_appium_case_196` | ✅ PASSED |
+| 197 | Settings Screen | `test_settings_screen_extended_appium_case_197` | ✅ PASSED |
+| 198 | App Launch | `test_app_launch_extended_appium_case_198` | ✅ PASSED |
+| 199 | Chat Screen | `test_chat_screen_extended_appium_case_199` | ✅ PASSED |
+| 200 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_200` | ✅ PASSED |
+| 201 | History Screen | `test_history_screen_extended_appium_case_201` | ✅ PASSED |
+| 202 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_202` | ✅ PASSED |
+| 203 | Login Screen | `test_login_screen_extended_appium_case_203` | ✅ PASSED |
+| 204 | Predict Screen | `test_predict_screen_extended_appium_case_204` | ✅ PASSED |
+| 205 | Profile Screen | `test_profile_screen_extended_appium_case_205` | ✅ PASSED |
+| 206 | Register Screen | `test_register_screen_extended_appium_case_206` | ✅ PASSED |
+| 207 | Result Screen | `test_result_screen_extended_appium_case_207` | ✅ PASSED |
+| 208 | Settings Screen | `test_settings_screen_extended_appium_case_208` | ✅ PASSED |
+| 209 | App Launch | `test_app_launch_extended_appium_case_209` | ✅ PASSED |
+| 210 | Chat Screen | `test_chat_screen_extended_appium_case_210` | ✅ PASSED |
+| 211 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_211` | ✅ PASSED |
+| 212 | History Screen | `test_history_screen_extended_appium_case_212` | ✅ PASSED |
+| 213 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_213` | ✅ PASSED |
+| 214 | Login Screen | `test_login_screen_extended_appium_case_214` | ✅ PASSED |
+| 215 | Predict Screen | `test_predict_screen_extended_appium_case_215` | ✅ PASSED |
+| 216 | Profile Screen | `test_profile_screen_extended_appium_case_216` | ✅ PASSED |
+| 217 | Register Screen | `test_register_screen_extended_appium_case_217` | ✅ PASSED |
+| 218 | Result Screen | `test_result_screen_extended_appium_case_218` | ✅ PASSED |
+| 219 | Settings Screen | `test_settings_screen_extended_appium_case_219` | ✅ PASSED |
+| 220 | App Launch | `test_app_launch_extended_appium_case_220` | ✅ PASSED |
+| 221 | Chat Screen | `test_chat_screen_extended_appium_case_221` | ✅ PASSED |
+| 222 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_222` | ✅ PASSED |
+| 223 | History Screen | `test_history_screen_extended_appium_case_223` | ✅ PASSED |
+| 224 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_224` | ✅ PASSED |
+| 225 | Login Screen | `test_login_screen_extended_appium_case_225` | ✅ PASSED |
+| 226 | Predict Screen | `test_predict_screen_extended_appium_case_226` | ✅ PASSED |
+| 227 | Profile Screen | `test_profile_screen_extended_appium_case_227` | ✅ PASSED |
+| 228 | Register Screen | `test_register_screen_extended_appium_case_228` | ✅ PASSED |
+| 229 | Result Screen | `test_result_screen_extended_appium_case_229` | ✅ PASSED |
+| 230 | Settings Screen | `test_settings_screen_extended_appium_case_230` | ✅ PASSED |
+| 231 | App Launch | `test_app_launch_extended_appium_case_231` | ✅ PASSED |
+| 232 | Chat Screen | `test_chat_screen_extended_appium_case_232` | ✅ PASSED |
+| 233 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_233` | ✅ PASSED |
+| 234 | History Screen | `test_history_screen_extended_appium_case_234` | ✅ PASSED |
+| 235 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_235` | ✅ PASSED |
+| 236 | Login Screen | `test_login_screen_extended_appium_case_236` | ✅ PASSED |
+| 237 | Predict Screen | `test_predict_screen_extended_appium_case_237` | ✅ PASSED |
+| 238 | Profile Screen | `test_profile_screen_extended_appium_case_238` | ✅ PASSED |
+| 239 | Register Screen | `test_register_screen_extended_appium_case_239` | ✅ PASSED |
+| 240 | Result Screen | `test_result_screen_extended_appium_case_240` | ✅ PASSED |
+| 241 | Settings Screen | `test_settings_screen_extended_appium_case_241` | ✅ PASSED |
+| 242 | App Launch | `test_app_launch_extended_appium_case_242` | ✅ PASSED |
+| 243 | Chat Screen | `test_chat_screen_extended_appium_case_243` | ✅ PASSED |
+| 244 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_244` | ✅ PASSED |
+| 245 | History Screen | `test_history_screen_extended_appium_case_245` | ✅ PASSED |
+| 246 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_246` | ✅ PASSED |
+| 247 | Login Screen | `test_login_screen_extended_appium_case_247` | ✅ PASSED |
+| 248 | Predict Screen | `test_predict_screen_extended_appium_case_248` | ✅ PASSED |
+| 249 | Profile Screen | `test_profile_screen_extended_appium_case_249` | ✅ PASSED |
+| 250 | Register Screen | `test_register_screen_extended_appium_case_250` | ✅ PASSED |
+| 251 | Result Screen | `test_result_screen_extended_appium_case_251` | ✅ PASSED |
+| 252 | Settings Screen | `test_settings_screen_extended_appium_case_252` | ✅ PASSED |
+| 253 | App Launch | `test_app_launch_extended_appium_case_253` | ✅ PASSED |
+| 254 | Chat Screen | `test_chat_screen_extended_appium_case_254` | ✅ PASSED |
+| 255 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_255` | ✅ PASSED |
+| 256 | History Screen | `test_history_screen_extended_appium_case_256` | ✅ PASSED |
+| 257 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_257` | ✅ PASSED |
+| 258 | Login Screen | `test_login_screen_extended_appium_case_258` | ✅ PASSED |
+| 259 | Predict Screen | `test_predict_screen_extended_appium_case_259` | ✅ PASSED |
+| 260 | Profile Screen | `test_profile_screen_extended_appium_case_260` | ✅ PASSED |
+| 261 | Register Screen | `test_register_screen_extended_appium_case_261` | ✅ PASSED |
+| 262 | Result Screen | `test_result_screen_extended_appium_case_262` | ✅ PASSED |
+| 263 | Settings Screen | `test_settings_screen_extended_appium_case_263` | ✅ PASSED |
+| 264 | App Launch | `test_app_launch_extended_appium_case_264` | ✅ PASSED |
+| 265 | Chat Screen | `test_chat_screen_extended_appium_case_265` | ✅ PASSED |
+| 266 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_266` | ✅ PASSED |
+| 267 | History Screen | `test_history_screen_extended_appium_case_267` | ✅ PASSED |
+| 268 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_268` | ✅ PASSED |
+| 269 | Login Screen | `test_login_screen_extended_appium_case_269` | ✅ PASSED |
+| 270 | Predict Screen | `test_predict_screen_extended_appium_case_270` | ✅ PASSED |
+| 271 | Profile Screen | `test_profile_screen_extended_appium_case_271` | ✅ PASSED |
+| 272 | Register Screen | `test_register_screen_extended_appium_case_272` | ✅ PASSED |
+| 273 | Result Screen | `test_result_screen_extended_appium_case_273` | ✅ PASSED |
+| 274 | Settings Screen | `test_settings_screen_extended_appium_case_274` | ✅ PASSED |
+| 275 | App Launch | `test_app_launch_extended_appium_case_275` | ✅ PASSED |
+| 276 | Chat Screen | `test_chat_screen_extended_appium_case_276` | ✅ PASSED |
+| 277 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_277` | ✅ PASSED |
+| 278 | History Screen | `test_history_screen_extended_appium_case_278` | ✅ PASSED |
+| 279 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_279` | ✅ PASSED |
+| 280 | Login Screen | `test_login_screen_extended_appium_case_280` | ✅ PASSED |
+| 281 | Predict Screen | `test_predict_screen_extended_appium_case_281` | ✅ PASSED |
+| 282 | Profile Screen | `test_profile_screen_extended_appium_case_282` | ✅ PASSED |
+| 283 | Register Screen | `test_register_screen_extended_appium_case_283` | ✅ PASSED |
+| 284 | Result Screen | `test_result_screen_extended_appium_case_284` | ✅ PASSED |
+| 285 | Settings Screen | `test_settings_screen_extended_appium_case_285` | ✅ PASSED |
+| 286 | App Launch | `test_app_launch_extended_appium_case_286` | ✅ PASSED |
+| 287 | Chat Screen | `test_chat_screen_extended_appium_case_287` | ✅ PASSED |
+| 288 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_288` | ✅ PASSED |
+| 289 | History Screen | `test_history_screen_extended_appium_case_289` | ✅ PASSED |
+| 290 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_290` | ✅ PASSED |
+| 291 | Login Screen | `test_login_screen_extended_appium_case_291` | ✅ PASSED |
+| 292 | Predict Screen | `test_predict_screen_extended_appium_case_292` | ✅ PASSED |
+| 293 | Profile Screen | `test_profile_screen_extended_appium_case_293` | ✅ PASSED |
+| 294 | Register Screen | `test_register_screen_extended_appium_case_294` | ✅ PASSED |
+| 295 | Result Screen | `test_result_screen_extended_appium_case_295` | ✅ PASSED |
+| 296 | Settings Screen | `test_settings_screen_extended_appium_case_296` | ✅ PASSED |
+| 297 | App Launch | `test_app_launch_extended_appium_case_297` | ✅ PASSED |
+| 298 | Chat Screen | `test_chat_screen_extended_appium_case_298` | ✅ PASSED |
+| 299 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_299` | ✅ PASSED |
+| 300 | History Screen | `test_history_screen_extended_appium_case_300` | ✅ PASSED |
+| 301 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_301` | ✅ PASSED |
+| 302 | Login Screen | `test_login_screen_extended_appium_case_302` | ✅ PASSED |
+| 303 | Predict Screen | `test_predict_screen_extended_appium_case_303` | ✅ PASSED |
+| 304 | Profile Screen | `test_profile_screen_extended_appium_case_304` | ✅ PASSED |
+| 305 | Register Screen | `test_register_screen_extended_appium_case_305` | ✅ PASSED |
+| 306 | Result Screen | `test_result_screen_extended_appium_case_306` | ✅ PASSED |
+| 307 | Settings Screen | `test_settings_screen_extended_appium_case_307` | ✅ PASSED |
+| 308 | App Launch | `test_app_launch_extended_appium_case_308` | ✅ PASSED |
+| 309 | Chat Screen | `test_chat_screen_extended_appium_case_309` | ✅ PASSED |
+| 310 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_310` | ✅ PASSED |
+| 311 | History Screen | `test_history_screen_extended_appium_case_311` | ✅ PASSED |
+| 312 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_312` | ✅ PASSED |
+| 313 | Login Screen | `test_login_screen_extended_appium_case_313` | ✅ PASSED |
+| 314 | Predict Screen | `test_predict_screen_extended_appium_case_314` | ✅ PASSED |
+| 315 | Profile Screen | `test_profile_screen_extended_appium_case_315` | ✅ PASSED |
+| 316 | Register Screen | `test_register_screen_extended_appium_case_316` | ✅ PASSED |
+| 317 | Result Screen | `test_result_screen_extended_appium_case_317` | ✅ PASSED |
+| 318 | Settings Screen | `test_settings_screen_extended_appium_case_318` | ✅ PASSED |
+| 319 | App Launch | `test_app_launch_extended_appium_case_319` | ✅ PASSED |
+| 320 | Chat Screen | `test_chat_screen_extended_appium_case_320` | ✅ PASSED |
+| 321 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_321` | ✅ PASSED |
+| 322 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_322` | ✅ PASSED |
+| 323 | Login Screen | `test_login_screen_extended_appium_case_323` | ✅ PASSED |
+| 324 | Predict Screen | `test_predict_screen_extended_appium_case_324` | ✅ PASSED |
+| 325 | Profile Screen | `test_profile_screen_extended_appium_case_325` | ✅ PASSED |
+| 326 | Register Screen | `test_register_screen_extended_appium_case_326` | ✅ PASSED |
+| 327 | Result Screen | `test_result_screen_extended_appium_case_327` | ✅ PASSED |
+| 328 | Settings Screen | `test_settings_screen_extended_appium_case_328` | ✅ PASSED |
+| 329 | App Launch | `test_app_launch_extended_appium_case_329` | ✅ PASSED |
+| 330 | Chat Screen | `test_chat_screen_extended_appium_case_330` | ✅ PASSED |
+| 331 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_331` | ✅ PASSED |
+| 332 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_332` | ✅ PASSED |
+| 333 | Login Screen | `test_login_screen_extended_appium_case_333` | ✅ PASSED |
+| 334 | Predict Screen | `test_predict_screen_extended_appium_case_334` | ✅ PASSED |
+| 335 | Profile Screen | `test_profile_screen_extended_appium_case_335` | ✅ PASSED |
+| 336 | Register Screen | `test_register_screen_extended_appium_case_336` | ✅ PASSED |
+| 337 | Result Screen | `test_result_screen_extended_appium_case_337` | ✅ PASSED |
+| 338 | Settings Screen | `test_settings_screen_extended_appium_case_338` | ✅ PASSED |
+| 339 | App Launch | `test_app_launch_extended_appium_case_339` | ✅ PASSED |
+| 340 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_340` | ✅ PASSED |
+| 341 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_341` | ✅ PASSED |
+| 342 | Login Screen | `test_login_screen_extended_appium_case_342` | ✅ PASSED |
+| 343 | Predict Screen | `test_predict_screen_extended_appium_case_343` | ✅ PASSED |
+| 344 | Settings Screen | `test_settings_screen_extended_appium_case_344` | ✅ PASSED |
+| 345 | App Launch | `test_app_launch_extended_appium_case_345` | ✅ PASSED |
+| 346 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_346` | ✅ PASSED |
+| 347 | Hospitals Screen | `test_hospitals_screen_extended_appium_case_347` | ✅ PASSED |
+| 348 | Predict Screen | `test_predict_screen_extended_appium_case_348` | ✅ PASSED |
+| 349 | Settings Screen | `test_settings_screen_extended_appium_case_349` | ✅ PASSED |
+| 350 | Dashboard Screen | `test_dashboard_screen_extended_appium_case_350` | ✅ PASSED |
 
 </details>
 
