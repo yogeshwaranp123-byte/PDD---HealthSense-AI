@@ -132,3 +132,9 @@ jobs:
         with:
           name: Backend-Security-Report
           path: backend/Security_Vulnerability_Report_2026-06-11T07-29-57.xlsx
+
+      - name: Upload Load Testing Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Load-Testing-Report
+          path: load_testing/Load_Test_Report_Latest.xlsx
