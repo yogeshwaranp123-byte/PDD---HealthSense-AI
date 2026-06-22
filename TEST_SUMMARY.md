@@ -1,6 +1,6 @@
 # 🧪 HealthSense AI Unified Test Verification Dashboard
 
-This dashboard presents a unified summary of E2E tests and security scans across all major components: Website, Mobile App, and Backend.
+This dashboard presents a unified summary of E2E tests, security scans, and API load testing across all major components: Website, Mobile App, Backend, and APIs.
 
 ## 📊 Unified Summary Overview
 | Component | Test Suite / Report | Total Tests | Passed / Fixed | Failed / Open | Pass/Fix Rate | Duration |
@@ -8,6 +8,7 @@ This dashboard presents a unified summary of E2E tests and security scans across
 | **Website E2E** | HealthSense Web App – Full E2E Workflow | 400 | ✅ 400 | ❌ 0 | **100%** | 200s |
 | **Mobile E2E** | HealthSense AI - Full Appium E2E Automation | 400 | ✅ 400 | ❌ 0 | **100.0%** | 500.00 seconds |
 | **Backend Security** | HealthSense AI — Security Vulnerability Report | 400 | ✅ 400 | 📄 0 | **100%** | N/A |
+| **API Load Testing** | HealthSense AI API Load Testing Report | 20,152 | ✅ 20,152 | ❌ 0 | **100.0%** | 120s |
 
 
 ## 🌐 Website E2E Test Verification Details
@@ -1236,8 +1237,21 @@ This dashboard presents a unified summary of E2E tests and security scans across
 
 </details>
 
+## ⚡ API Load Testing Details
+**Test Configuration:** Concurrency: 100 VUs • Duration: 60s per scenario
+
+<details><summary>Click to view API Load Testing Scenarios</summary>
+
+| Scenario Name | Total Requests | Success Rate | Avg RPS | Avg Latency | Min Latency | Max Latency | p50 (Median) | p95 Latency | p99 Latency |
+|---|---|---|---|---|---|---|---|---|---|
+| Scenario A: Public Root (/) - Framework Overhead | 9,592 | 100.0% | 159.9 | 627.6 ms | 11.0 ms | 5751.4 ms | 267.2 ms | 2461.8 ms | 3990.9 ms |
+| Scenario B: Authenticated (/user/profile) - DB & JWT | 10,560 | 100.0% | 176.0 | 565.6 ms | 12.6 ms | 5343.1 ms | 272.1 ms | 2098.6 ms | 3679.8 ms |
+
+</details>
+
 ## 📦 Test Report Artifacts
 The full test report files are uploaded as part of this workflow run and can be inspected in the artifacts list:
 - Website E2E Report: `website/E2E_Test_Report_Healthsense AI_2026-06-11T11-32-38.xlsx`
 - Mobile E2E Report: `mobile/report/E2E_Appium_Report_HealthSense_2026-06-11T20-15-33.xlsx`
 - Backend Security Report: `backend/Security_Vulnerability_Report_2026-06-11T07-29-57.xlsx`
+- Load Testing Report: `load_testing/Load_Test_Report_Latest.xlsx`

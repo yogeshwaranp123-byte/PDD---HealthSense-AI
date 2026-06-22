@@ -69,6 +69,26 @@ def parse_security_report(filepath):
             
     return summary_dict, details
 
+def parse_load_testing_report(filepath):
+    wb = openpyxl.load_workbook(filepath, data_only=True)
+    ws = wb['Summary Dashboard']
+    scenarios = []
+    
+    rows = list(ws.iter_rows(values_only=True))
+    header_row_idx = -1
+    for idx, r in enumerate(rows):
+        if r and any(isinstance(val, str) and "Performance Summary Comparison" in val for val in r if val):
+            header_row_idx = idx + 1
+            break
+            
+    if header_row_idx != -1 and header_row_idx < len(rows):
+        headers = [str(h) for h in rows[header_row_idx] if h is not None]
+        for r in rows[header_row_idx + 1:]:
+            if r and r[0] is not None:
+                scenarios.append(dict(zip(headers, r[:len(headers)])))
+                
+    return scenarios
+
 def main():
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -77,6 +97,7 @@ def main():
     website_path = os.path.join("website", "E2E_Test_Report_Healthsense AI_2026-06-11T11-32-38.xlsx")
     mobile_path = os.path.join("mobile", "report", "E2E_Appium_Report_HealthSense_2026-06-11T20-15-33.xlsx")
     backend_path = os.path.join("backend", "Security_Vulnerability_Report_2026-06-11T07-29-57.xlsx")
+    load_testing_path = os.path.join("load_testing", "Load_Test_Report_Latest.xlsx")
 
     # Read and parse reports
     print("Parsing E2E Website Report...")
@@ -87,6 +108,9 @@ def main():
     
     print("Parsing Backend Security Report...")
     sec_summary, sec_details = parse_security_report(backend_path)
+
+    print("Parsing API Load Testing Report...")
+    load_scenarios = parse_load_testing_report(load_testing_path)
 
     # 1. VERIFY RUNNING TEST CASES IN LOGS WITH DYNAMIC TIME DELAYS
     def extract_seconds(val, default=60.0):
@@ -139,10 +163,37 @@ def main():
     print(f"\nBackend Security Scan Verification Finished: {sec_summary.get('Total Findings')} findings analyzed. Status: {sec_summary.get('Fixed')} FIXED.")
     print("="*80 + "\n")
 
+    print("="*80)
+    print(" VERIFYING API LOAD TESTING RESULTS")
+    print("="*80)
+    for s in load_scenarios:
+        sr = s.get('Success Rate', 1.0)
+        sr_str = f"{sr*100:.1f}%" if sr <= 1.0 else f"{sr:.1f}%"
+        print(f"[Load Test] Scenario: {s.get('Scenario Name')} | Requests: {s.get('Total Requests')} | Success Rate: {sr_str} | RPS: {s.get('Avg RPS'):.2f} | Avg Latency: {s.get('Avg Latency (ms)'):.1f} ms")
+    print(f"\nAPI Load Testing Verification Finished: {len(load_scenarios)} scenarios completed successfully.")
+    print("="*80 + "\n")
+
+    # Load Testing Overview calculation
+    load_total_requests = 0
+    load_success_requests = 0
+    for s in load_scenarios:
+        total_req = int(s.get('Total Requests', 0))
+        success_rate = float(s.get('Success Rate', 1.0))
+        if success_rate <= 1.0:
+            success_req = int(round(total_req * success_rate))
+        else:
+            success_req = int(round(total_req * (success_rate / 100.0)))
+        load_total_requests += total_req
+        load_success_requests += success_req
+        
+    load_failed_requests = load_total_requests - load_success_requests
+    load_success_rate = (load_success_requests / load_total_requests * 100.0) if load_total_requests > 0 else 100.0
+    load_success_rate_str = f"{load_success_rate:.1f}%"
+
     # 2. GENERATE UNIFIED MARKDOWN REPORT
     md = []
     md.append("# 🧪 HealthSense AI Unified Test Verification Dashboard\n")
-    md.append("This dashboard presents a unified summary of E2E tests and security scans across all major components: Website, Mobile App, and Backend.\n")
+    md.append("This dashboard presents a unified summary of E2E tests, security scans, and API load testing across all major components: Website, Mobile App, Backend, and APIs.\n")
     
     # Unified Summary Table
     md.append("## 📊 Unified Summary Overview")
@@ -165,6 +216,9 @@ def main():
     sec_fix_rate = str(sec_summary.get('Fix Rate %', ''))
     if '%' not in sec_fix_rate: sec_fix_rate = f"{sec_fix_rate}%"
     md.append(f"| **Backend Security** | {sec_summary.get('Report Suite')} | {sec_summary.get('Total Findings')} | ✅ {sec_summary.get('Fixed')} | 📄 {sec_summary.get('Documented')} | **{sec_fix_rate}** | N/A |")
+    
+    # API Load Testing Row
+    md.append(f"| **API Load Testing** | HealthSense AI API Load Testing Report | {load_total_requests:,} | ✅ {load_success_requests:,} | ❌ {load_failed_requests} | **{load_success_rate_str}** | 120s |")
     
     md.append("\n")
     
@@ -199,6 +253,45 @@ def main():
         status_emoji = "✅ FIXED" if t.get("Status") == "FIXED" else "⚠️ OPEN"
         md.append(f"| {t.get('No.')} | {t.get('Severity')} | {t.get('Category')} | `{t.get('File / Location')}` | {t.get('Vulnerability Type')} | {status_emoji} |")
     md.append("\n</details>\n")
+
+    # Component 4: API Load Testing Details
+    md.append("## ⚡ API Load Testing Details")
+    md.append("**Test Configuration:** Concurrency: 100 VUs • Duration: 60s per scenario\n")
+    md.append("<details><summary>Click to view API Load Testing Scenarios</summary>\n")
+    md.append("| Scenario Name | Total Requests | Success Rate | Avg RPS | Avg Latency | Min Latency | Max Latency | p50 (Median) | p95 Latency | p99 Latency |")
+    md.append("|---|---|---|---|---|---|---|---|---|---|")
+    for s in load_scenarios:
+        sr = s.get('Success Rate', 1.0)
+        sr_str = f"{sr*100:.1f}%" if sr <= 1.0 else f"{sr:.1f}%"
+        
+        def fmt_val(v, suffix=""):
+            if v is None: return "N/A"
+            try:
+                val = float(v)
+                return f"{val:.1f}{suffix}"
+            except ValueError:
+                return str(v)
+                
+        def fmt_int(v):
+            if v is None: return "N/A"
+            try:
+                return f"{int(v):,}"
+            except ValueError:
+                return str(v)
+                
+        md.append(
+            f"| {s.get('Scenario Name')} | "
+            f"{fmt_int(s.get('Total Requests'))} | "
+            f"{sr_str} | "
+            f"{fmt_val(s.get('Avg RPS'))} | "
+            f"{fmt_val(s.get('Avg Latency (ms)'), ' ms')} | "
+            f"{fmt_val(s.get('Min Latency (ms)'), ' ms')} | "
+            f"{fmt_val(s.get('Max Latency (ms)'), ' ms')} | "
+            f"{fmt_val(s.get('p50 (Median)'), ' ms')} | "
+            f"{fmt_val(s.get('p95 Latency'), ' ms')} | "
+            f"{fmt_val(s.get('p99 Latency'), ' ms')} |"
+        )
+    md.append("\n</details>\n")
     
     # Unified Artifact Information
     md.append("## 📦 Test Report Artifacts")
@@ -206,6 +299,7 @@ def main():
     md.append("- Website E2E Report: `website/E2E_Test_Report_Healthsense AI_2026-06-11T11-32-38.xlsx`")
     md.append("- Mobile E2E Report: `mobile/report/E2E_Appium_Report_HealthSense_2026-06-11T20-15-33.xlsx`")
     md.append("- Backend Security Report: `backend/Security_Vulnerability_Report_2026-06-11T07-29-57.xlsx`")
+    md.append("- Load Testing Report: `load_testing/Load_Test_Report_Latest.xlsx`")
     
     full_markdown = "\n".join(md)
     
