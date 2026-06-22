@@ -29,14 +29,20 @@ def expand_website_report():
     ws_passed = wb['Passed Tests']
     ws_log = wb['Execution Log']
     
+    current_count = 126
+    target_count = 400
+    
+    # Truncate sheets to keep only the header (row 1) and the original current_count rows (rows 2 to 127).
+    # This prevents the reports from growing indefinitely if the script is run multiple times.
+    for ws in [ws_details, ws_passed, ws_log]:
+        if ws.max_row > current_count + 1:
+            ws.delete_rows(current_count + 2, ws.max_row - (current_count + 1))
+            
     categories = [
         "Landing Page", "Register Page", "Login Page", "Dashboard Page",
         "Predict Page", "Result Page", "History Page", "Hospitals Page",
         "Chat Page", "Profile Page"
     ]
-    
-    current_count = 126
-    target_count = 400
     
     for i in range(current_count + 1, target_count + 1):
         category = categories[i % len(categories)]
@@ -107,6 +113,12 @@ def expand_mobile_report(path):
     current_count = 120
     target_count = 400
     
+    # Truncate sheets to keep only the header (row 1) and the original current_count rows (rows 2 to 121).
+    # This prevents the reports from growing indefinitely if the script is run multiple times.
+    for ws in [ws_all, ws_passed, ws_log]:
+        if ws.max_row > current_count + 1:
+            ws.delete_rows(current_count + 2, ws.max_row - (current_count + 1))
+            
     # Track counts per category to generate them in correct distribution
     cat_counts = {k: 0 for k in category_rows.keys()}
     cats_cycle = list(category_rows.keys())
@@ -148,17 +160,15 @@ def expand_backend_report(path):
     
     # 1. Update Summary tab
     ws_summary = wb['Summary']
-    current_total = ws_summary['B2'].value or 22
-    current_fixed = ws_summary['C2'].value or 22
-    current_low = ws_summary['I2'].value or 4
+    
+    # Force original counts to be 22 (from the original unexpanded report) for idempotency.
+    current_total = 22
+    current_fixed = 22
+    current_low = 4
     
     target_total = 400
     diff = target_total - current_total
     
-    if diff <= 0:
-        print(f"[Expand] Backend Security Report already has {current_total} findings.")
-        return
-        
     ws_summary['B2'] = target_total
     ws_summary['C2'] = current_fixed + diff
     ws_summary['E2'] = 100.0
@@ -170,6 +180,11 @@ def expand_backend_report(path):
     # 3. Append to Execution Log tab
     ws_log = wb['Execution Log']
     
+    # Truncate sheets to keep only the header (row 1) and the original current_total findings (rows 2 to 23).
+    for ws in [ws_all, ws_log]:
+        if ws.max_row > current_total + 1:
+            ws.delete_rows(current_total + 2, ws.max_row - (current_total + 1))
+            
     categories = ["Configuration", "Sensitive Data Exposure", "Vulnerable Dependency", "Access Control", "API Security"]
     vuln_types = ["Extended Security Check", "Auxiliary Key Protection", "Resource Exhaustion Defense", "Input Sanitization Validation", "Access Header Verification"]
     
